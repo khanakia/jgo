@@ -1,0 +1,20 @@
+mode: "debug"
+
+server:
+  port: 7000
+
+database:
+  host: "localhost"
+  name: "jgodb"
+  password: "root"
+  port: "5432"
+  type: "postgres"
+  user: "postgres"
+
+
+auth:
+  enableRoutes: true
+  names: ["aman", "lucian"]
+
+# root: &BASE /path/to/root/
+# script: *BASE

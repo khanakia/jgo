@@ -1,0 +1,12 @@
+{
+  "name": "jeoga_go",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gin --excludeDir uploads --appPort 3001 --all -i run .",
+    "start:nm" : "nodemon --watch './**/*.go' --signal SIGTERM --exec 'go' run .",
+    "start:cd" : "CompileDaemon -command='./jeoga_go'",
+    "psql" : "export POSTGRESQL_URL='postgres://postgres:root@localhost:5432/jeogagodb?sslmode=disable'",
+    "dbmigrate" : "yarn psql && migrate -database ${POSTGRESQL_URL} -path db/migrations",
+    "godoc": "godoc -http=:6060 & open http://localhost:6060/"
+  }
+}
